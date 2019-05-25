@@ -12,15 +12,50 @@ const saveRecipes = (recipes) => {
     localStorage.setItem('recipes', JSON.stringify(recipes))
 }
 
+///////////////////Recipe Script////////////////////////////////////////////////////////////////////////////////////////////
+
+const removeRecipe = function (recipes, recipeId) {
+    const recipeIndex = recipes.findIndex(function (item) {
+        return item.id === recipeId
+    })
+    console.log(recipeIndex)
+
+    if (recipeIndex > -1) {
+        recipes.splice(recipeIndex, 1)
+    }
+}
+
+const ingredientStatus = function (ingredients) {
+    const none = ingredients.every(function (item) {
+        return item.have === false
+    })
+    const some = ingredients.some(function (item) {
+        return item.have === true
+    })
+    const every = ingredients.every(function (item) {
+        return item.have === true
+    })
+
+    if (none) {
+        return 'You have none of the ingredients'
+    } else if (every) {
+        return 'You have all of the ingredients'
+    } else if (some) {
+        return 'You have some of the ingredients'
+    } else {}
+}
+
+
 const generateRecipeDOM = function (recipe) {
     const recipeEl = document.createElement('div')
     const tagEl = document.createElement('a')
     const titleEl = document.createElement('h4')
     const ingredientSummary = document.createElement('p')
+    ingredientSummary.textContent = ingredientStatus(recipe.ingredients)
 
     tagEl.setAttribute('href', `edit.html#${recipe.id}`)
     recipeEl.appendChild(tagEl)
-    ingredientSummary.textContent = 'testing'
+    //ingredientSummary.textContent = 'testing'
     tagEl.appendChild(titleEl)
     tagEl.appendChild(ingredientSummary)
     
@@ -49,6 +84,8 @@ const renderRecipes = function (recipes, filters) {
     })
 }
 
+//////////Ingredient Script//////////////////////////////////////////////////////////////////////////////////////
+
 const addIngredient = function (recipes, ingredient) {
     const recipe = recipes.find(function (recipe) {
         return recipe.id === recipeId
@@ -72,8 +109,6 @@ const generateIngredientDOM = function (ingredient, recipe) {
     checkbox.setAttribute('type', 'checkbox')
     checkbox.checked = ingredient.have
     
-
-
     removeButton.textContent = 'Remove'
     
     span.textContent = ingredient.text
@@ -81,9 +116,6 @@ const generateIngredientDOM = function (ingredient, recipe) {
     label.appendChild(span)
 
     
-    
-    
-    //label.appendChild(removeButton)
     ingredientEl.appendChild(label)
     ingredientEl.appendChild(removeButton)
 
@@ -98,7 +130,6 @@ const generateIngredientDOM = function (ingredient, recipe) {
         saveRecipes(recipes)
         renderIngredients(recipe)
     })
-    
     
     return ingredientEl
 

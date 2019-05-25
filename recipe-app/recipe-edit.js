@@ -32,3 +32,14 @@ document.querySelector('#add-ingredient-form').addEventListener('submit', functi
     e.target.elements.text.value = ''
 })
 
+document.querySelector('#save-button').addEventListener('click', function () {
+    saveRecipes(recipes)
+    location.assign('index.html')
+})
+
+document.querySelector('#remove-button').addEventListener('click', function () {
+    removeRecipe(recipes, recipeId)
+    saveRecipes(recipes)
+    location.assign('index.html')
+})
+
