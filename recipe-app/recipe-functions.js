@@ -58,21 +58,26 @@ const generateIngredientDOM = function (ingredient, recipe) {
     
     const ingredientEl = document.createElement('div')
     const label = document.createElement('label')
+    const span = document.createElement('span')
     const removeButton = document.createElement('button')     ///organize this better
     const checkbox = document.createElement('input')
     checkbox.setAttribute('type', 'checkbox')
     checkbox.checked = ingredient.have
-    // checkbox.setAttribute('id', 'have-item')
+    
 
 
     removeButton.textContent = 'Remove'
-    label.textContent = ingredient.text
+    
+    span.textContent = ingredient.text
+    label.appendChild(checkbox)
+    label.appendChild(span)
 
     
-    //label.innerHTML = `<input type="checkbox" id="have-item"> ${ingredient}`
-    label.appendChild(checkbox)
-    label.appendChild(removeButton)
+    
+    
+    //label.appendChild(removeButton)
     ingredientEl.appendChild(label)
+    ingredientEl.appendChild(removeButton)
 
     checkbox.addEventListener('change', function (e) {
         ingredient.have = e.target.checked

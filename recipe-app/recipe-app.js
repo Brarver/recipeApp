@@ -19,3 +19,9 @@ document.querySelector('#add-recipe').addEventListener('click', function () {
     location.assign(`edit.html#${id}`)
 })
 
+
+
+///wire up search input
+//wire up ingredient status on home page using array.some
+//wire up save and delete button on edit page
+//make page title link to home page
