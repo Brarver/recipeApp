@@ -14,12 +14,16 @@ const saveRecipes = (recipes) => {
 
 const generateRecipeDOM = function (recipe) {
     const recipeEl = document.createElement('div')
-    const titleEl = document.createElement('a')
-    //const ingredientSummary = document.createElement('p')
+    const tagEl = document.createElement('a')
+    const titleEl = document.createElement('h4')
+    const ingredientSummary = document.createElement('p')
 
-    titleEl.setAttribute('href', `edit.html#${recipe.id}`)
-    recipeEl.appendChild(titleEl)
-    //recipeEl.appendChild(ingredientSummary)
+    tagEl.setAttribute('href', `edit.html#${recipe.id}`)
+    recipeEl.appendChild(tagEl)
+    ingredientSummary.textContent = 'testing'
+    tagEl.appendChild(titleEl)
+    tagEl.appendChild(ingredientSummary)
+    
 
     if (recipe.title.length > 0) {
         titleEl.textContent = recipe.title
@@ -31,11 +35,15 @@ const generateRecipeDOM = function (recipe) {
 
 }
 
-const renderRecipes = function (recipes) {
+const renderRecipes = function (recipes, filters) {
 
-    //document.querySelector('#recipes').innerHTML = ''
+    filteredRecipes = recipes.filter(function (recipe) {
+        return recipe.title.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
 
-    recipes.forEach(function (recipe) {
+    document.querySelector('#recipes').innerHTML = ''
+
+    filteredRecipes.forEach(function (recipe) {
         const recipeEl = generateRecipeDOM(recipe)
         document.querySelector('#recipes').appendChild(recipeEl)
     })

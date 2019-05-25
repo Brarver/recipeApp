@@ -1,10 +1,16 @@
 let recipes = getSavedRecipes()
 
 const filters = {
-    seachText: ''
+    searchText: ''
 }
 
-renderRecipes(recipes)
+renderRecipes(recipes, filters)
+
+document.querySelector('#search-text').addEventListener('input', function (e) {
+    filters.searchText = e.target.value
+    renderRecipes(recipes, filters)
+    
+})
 
 document.querySelector('#add-recipe').addEventListener('click', function () {
     const id = uuidv4()
@@ -21,7 +27,7 @@ document.querySelector('#add-recipe').addEventListener('click', function () {
 
 
 
-///wire up search input
+
 //wire up ingredient status on home page using array.some
 //wire up save and delete button on edit page
 //make page title link to home page
