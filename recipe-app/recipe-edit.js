@@ -6,8 +6,6 @@ if (!recipe) {
     location.assign('index.html')
 }
 
-//renderIngredients(recipe)
-
 document.querySelector('#recipe-title').value = recipe.title
 document.querySelector('#recipe-instructions').value = recipe.instructions
 
@@ -41,5 +39,19 @@ document.querySelector('#remove-button').addEventListener('click', function () {
     removeRecipe(recipes, recipeId)
     saveRecipes(recipes)
     location.assign('index.html')
+})
+
+window.addEventListener('storage', function (e) {
+    if (e.key === 'recipes') {
+        recipes = JSON.parse(e.newValue)
+        recipe = recipes.find((recipe) => recipe.id === recipeId)
+
+        if (!recipe) {
+            location.assign('index.html')
+        }
+
+        document.querySelector('#recipe-title').value = recipe.title
+        document.querySelector('#recipe-instructions').value = recipe.instructions
+    }
 })
 

@@ -2,15 +2,27 @@
 
 <html>
     <head>
-
+        <title>Recipe App</title>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Questrial&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1><a href="index.html">My Recipes</a></h1>
-        <input id="search-text" type="text" placeholder="Search">
+        <div id="header">
+            <h1>
+                <a href="index.html">My Recipes</a>
+            </h1>  
+        </div>
+        <div id="search">
+            <input id="search-text" type="text" placeholder="Search recipes">
+        </div>
+        
         <div id="recipes">
 
         </div>
-        <button id="add-recipe">Add Recipe</button>
+        <div id="button-container">
+            <button id="add-recipe">Add Recipe</button>
+        </div>
+        
         <script src="uuidv4.js"></script>
         <script src="recipe-functions.js"></script>
         <script src="recipe-app.js"></script>

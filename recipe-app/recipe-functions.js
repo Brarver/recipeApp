@@ -48,9 +48,13 @@ const ingredientStatus = function (ingredients) {
 
 const generateRecipeDOM = function (recipe) {
     const recipeEl = document.createElement('div')
+    recipeEl.setAttribute('class', 'recipe')
+    const edit = document.createElement('button')
+    edit.textContent = 'edit'
     const tagEl = document.createElement('a')
     const titleEl = document.createElement('h4')
     const ingredientSummary = document.createElement('p')
+    ingredientSummary.setAttribute('class', 'summary')
     ingredientSummary.textContent = ingredientStatus(recipe.ingredients)
 
     tagEl.setAttribute('href', `edit.html#${recipe.id}`)
@@ -58,6 +62,7 @@ const generateRecipeDOM = function (recipe) {
     //ingredientSummary.textContent = 'testing'
     tagEl.appendChild(titleEl)
     tagEl.appendChild(ingredientSummary)
+    recipeEl.appendChild(edit)
     
 
     if (recipe.title.length > 0) {

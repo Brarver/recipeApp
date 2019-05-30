@@ -24,3 +24,13 @@ document.querySelector('#add-recipe').addEventListener('click', function () {
     saveRecipes(recipes)
     location.assign(`edit.html#${id}`)
 })
+
+window.addEventListener('storage', function (e) {
+    if (e.key === 'recipes') {
+        recipes = JSON.parse(e.newValue)
+        renderRecipes(recipes, filters)
+    }
+})
+
+
+// see if you can setup cross page ingredient checker
