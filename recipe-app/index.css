@@ -15,11 +15,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 120px;
-    background-color: rgb(130, 193, 148);
+    /* background-color: rgb(130, 193, 148); */
+    background-image: linear-gradient(to right, rgb(34, 52, 79) , rgb(77, 131, 196));
+    border-radius: 5px;
 }
 
 #header a {
-    color: rgb(150, 143, 143);
+    color: rgb(211, 200, 200);
     text-decoration: none;
     font-family: 'Indie Flower', cursive;
     font-size: 60px;
@@ -31,7 +33,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    background-color: rgb(164, 150, 150);
+    background-color: rgb(211, 200, 200);
+    border-radius: 5px;
+}
+
+#search-text {
+    width: 200px;
+    height: 30px;
 }
 
 #recipes {
@@ -54,11 +62,11 @@ body {
 
 h4 {
     margin-top: 6px;
+    color: rgb(50, 83, 131);
 }
 
 .recipe a {
     text-decoration: none;
-    color: black;
     font-size: 22px;
     display: inline-block;
 }
@@ -76,17 +84,23 @@ h4 {
     border: .5px solid rgb(225, 212, 212);
 }
 
+.recipe button a {
+    color: rgb(211, 200, 200);
+    font-size: 12px;
+}
+
 #button-container {
     width: 600px;
     margin: auto;
+    
 }
 
 button {
     font-size: 18px;
     margin-top: 26px;
-    background-color: rgb(164, 150, 150);
+    background-color: rgb(211, 200, 200);
     border-radius: 5px;
     font-weight: bold;
-    color: rgb(74, 67, 67);
+    color: rgb(50, 83, 131);
     padding: 10px;
 }
