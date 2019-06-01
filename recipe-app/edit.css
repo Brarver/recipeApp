@@ -1,0 +1,152 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recipe-title__container {
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+#recipe-title {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    font-size: 22px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#recipe-instructions__container {
+    width: 500px;
+    height: 150px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#recipe-instructions {
+    width: 100%;
+    height: 150px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#ingredients-header__container {
+    font-family: 'Questrial', sans-serif;
+    color: rgb(50, 83, 131);
+    font-size: 26px;
+    letter-spacing: 2px;
+    height: 70px;
+    margin-top: 30px;
+}
+
+#ingredients {
+    flex-direction: column
+}
+
+.ingredient {
+    display: flex;
+    height: 50px;
+    width: 500px;
+    justify-content: center;
+    margin-bottom: 16px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    padding: 10px;
+    font-family: 'Questrial', sans-serif;
+    
+}
+
+.ingredient label {
+    align-self: center;
+}
+
+.ingredient span {
+    margin-left: 5px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.ingredient button {
+    margin-left: auto;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 2px 5px;
+    background-color: white;
+    border: .5px solid rgb(225, 212, 212);
+    font-family: 'Questrial', sans-serif;
+}
+
+#add-ingredient-form {
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    width: 500px;
+    justify-content: start;
+}
+
+#add-ingredient-form input {
+    height: 43px;
+    width: 300px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#add-ingredient-form button {
+    margin-left: auto;
+    font-size: 18px;
+    background-color: rgb(211, 200, 200);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(50, 83, 131);
+    padding: 10px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    font-family: 'Questrial', sans-serif;
+}
+
+#add-remove-buttons {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    /* justify-content: start; */
+}
+
+#add-remove-buttons button {
+    font-size: 18px;
+    background-color: rgb(211, 200, 200);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(50, 83, 131);
+    padding: 10px;
+    border: 0.5px solid rgb(227, 211, 211);
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px #eee3e3;
+    font-family: 'Questrial', sans-serif;
+    
+}
+
+#save-button {
+    width: 91px;
+}
+
+#remove-button {
+    margin-left: 20px;
+}
+

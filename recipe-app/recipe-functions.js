@@ -119,6 +119,7 @@ const generateIngredientDOM = function (ingredient, recipe) {
     const checkbox = document.createElement('input')
     checkbox.setAttribute('type', 'checkbox')
     checkbox.checked = ingredient.have
+    ingredientEl.setAttribute('class', 'ingredient')
     
     removeButton.textContent = 'Remove'
     

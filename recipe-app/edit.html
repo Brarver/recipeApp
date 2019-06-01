@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="shared.css">
+        <link rel="stylesheet" href="edit.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Questrial&display=swap" rel="stylesheet">
         <title>Recipe App</title>
     </head>
     <body>
-        <h1><a href="index.html">My Recipes</a></h1>
-        <a href="index.html">HOME</a><br>
-        <input id="recipe-title" type="text" placeholder="Recipe name">
-        <br>
-        <textarea id="recipe-instructions" placeholder="Recipe instructions"></textarea>
-        <div id="ingredients">
-            <h3>ingredients</h3>
+        <div id="header" class="box">
+            <h1>
+                <a href="index.html">My Recipes</a>
+            </h1>  
+        </div>
+        <div id="recipe-title__container" class="box">
+            <input id="recipe-title" type="text" placeholder="Recipe name">
+        </div>
+        <div id="recipe-instructions__container" class="box">
+            <textarea id="recipe-instructions" placeholder="Recipe instructions"></textarea>
+        </div>
+        <div id="ingredients-header__container" class="box">
+            <h3>Ingredients</h3>
+        </div>
+        <div id="ingredients" class="box">
+            
 
         </div>
-        <form id="add-ingredient-form">
+        <form id="add-ingredient-form" class="box">
             <input name="text" type="text" placeholder="Add ingredient">
             <button>Add</button>
         </form>
-        <div id="add-remove-buttons">
+        <div id="add-remove-buttons" class="box">
             <button id="save-button">Save</button>
             <button id="remove-button">Remove</button>
         </div>
+
         <script src="recipe-functions.js"></script>
         <script src="recipe-edit.js"></script>
 

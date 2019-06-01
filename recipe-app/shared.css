@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    /* background-color: rgb(130, 193, 148); */
+    background-image: linear-gradient(to right, rgb(34, 52, 79) , rgb(77, 131, 196));
+    border-radius: 5px;
+}
+
+#header a {
+    color: rgb(211, 200, 200);
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    
+}
