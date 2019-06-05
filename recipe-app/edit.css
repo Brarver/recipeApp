@@ -116,6 +116,7 @@
     border-radius: 5px;
     box-shadow: 5px 5px 4px #eee3e3;
     font-family: 'Questrial', sans-serif;
+    width: 80px;
 }
 
 #add-remove-buttons {
